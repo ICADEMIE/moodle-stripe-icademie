@@ -282,6 +282,9 @@ class stripe_helper {
             'customer_update' => [
                 'address' => 'auto',
             ],
+            'phone_number_collection' => [
+                'enabled' => true,
+            ],
             'billing_address_collection' => 'required',
         ]);
 
