@@ -202,6 +202,7 @@ class stripe_helper {
         global $DB;
         $customer = $this->stripe->customers->create([
             'email' => $user->email,
+            'name'  => $user->firstname . ' ' . $user->lastname,
             'description' => get_string('customerdescription', 'paygw_stripe', $user->id),
         ]);
         $record = new \stdClass();
@@ -281,6 +282,7 @@ class stripe_helper {
             'customer_update' => [
                 'address' => 'auto',
             ],
+            'billing_address_collection' => 'required',
         ]);
 
         return $session->id;
