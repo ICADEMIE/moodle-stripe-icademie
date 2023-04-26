@@ -36,11 +36,20 @@ $string['stripeaccount'] = 'Stripe account ID';
 $string['stripeaccount_help'] = 'For creating the direct charge branding page';
 $string['paymentsuccessful'] = 'Payment was successful';
 $string['paymentcancelled'] = 'Payment was cancelled';
+$string['paymentpending'] = 'Payment is pending, you will be enrolled when the payment has cleared.';
 $string['customerdescription'] = 'Moodle User ID: {$a}';
 $string['enableautomatictax'] = 'Enable automatic tax';
 $string['enableautomatictax_desc'] = 'Automatic tax must be enabled and configured in the Stripe dashboard.';
 $string['defaulttaxbehavior'] = 'Default tax behavior';
 $string['defaulttaxbehavior_help'] = 'Default behavior of tax (inclusive, exclusive). Changeable in Stripe dashboard.';
+
+$string['payment:successful:subject'] = 'Payment successful';
+$string['payment:successful:message'] = 'Your payment was successful, you can now visit {$a->url}';
+$string['payment:failed:subject'] = 'Payment failed';
+$string['payment:failed:message'] = 'Your payment failed to clear, please check your payment details and try again.';
+
+$string['messageprovider:payment_successful'] = 'Successful delayed payment confirmation notification';
+$string['messageprovider:payment_failed'] = 'Failed delayed payment notification';
 
 $string['taxbehavior:exclusive'] = 'Exclusive';
 $string['taxbehavior:inclusive'] = 'Inclusive';
@@ -56,6 +65,7 @@ $string['paymentmethod:sepa_debit'] = 'SEPA Direct Debit';
 $string['paymentmethod:sofort'] = 'Sofort';
 $string['paymentmethod:upi'] = 'UPI';
 $string['paymentmethod:netbanking'] = 'NetBanking';
+$string['paymentmethod:wechat_pay'] = 'WeChat Pay';
 
 $string['privacy:metadata:stripe_customers'] = 'Stores the relation from Moodle users to Stripe customer objects';
 $string['privacy:metadata:stripe_customers:userid'] = 'Moodle user ID';
